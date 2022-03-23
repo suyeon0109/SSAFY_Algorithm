@@ -4,19 +4,15 @@ for tc in range(int(input())):
     for i in la:
         try:
             if i == '+':
-                stk.append(stk.pop(-1) + stk.pop(-1))
+                stk.append(stk.pop() + stk.pop())
             elif i == '-':
-                stk.append(stk.pop(-1) - stk.pop(-1))
+                stk.append(stk.pop(-2) - stk.pop())
             elif i == '*':
-                stk.append(stk.pop(-1) * stk.pop(-1))
+                stk.append(stk.pop() * stk.pop())
             elif i == '/':
-                stk.append(stk.pop(-1) // stk.pop(-1))
+                stk.append(stk.pop(-2) // stk.pop())
             elif i == '.':
-                if la.index(i) == len(la)-1:
-                    result = stk.pop(-1)
-                else:
-                    print(f'#{tc+1} error')
-                    break
+                result = stk.pop()
             else:
                 stk.append(int(i))
         except:
