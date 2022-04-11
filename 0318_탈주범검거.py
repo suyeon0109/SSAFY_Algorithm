@@ -51,4 +51,3 @@ for tc in range(int(input())):
         cnt_0 += i.count(0)
 
     print(f'#{tc+1}', N*M - cnt_0)
-                
