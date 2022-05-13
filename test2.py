@@ -1,3 +1,4 @@
-la = [(1,2), (5,1), (3,9)]
-la.sort()
-print(la)
+a = 1
+for k in range(-4,5):
+    print(a)
+    a +=1 
