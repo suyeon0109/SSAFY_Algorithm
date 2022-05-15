@@ -23,9 +23,9 @@ for tc in range(int(input())):
                         if 0 <= p+i <= N-1 and 0 <= q+j <= N-1 and city[p+i][q+j] == 1:
                             service += 1
                 
-                if service*M >= cost and service > service_max:
+                if service * M >= cost and service > service_max:
                     service_max = service
         
         K += 1
     
-    print(f'#{tc+1}',service_max)
+    print(f'#{tc+1}', service_max)
